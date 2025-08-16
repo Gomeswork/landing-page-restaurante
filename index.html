@@ -6,11 +6,14 @@
     <title>PixelArt - Transforme Fotos do seu Cardápio em Ímãs de Pedidos</title>
     <meta name="description" content="PixelArt transforma as fotos amadoras do seu cardápio em imagens profissionais que vendem mais no iFood, Rappi e Instagram. Receba uma amostra grátis!">
     
+    <!-- OTIMIZAÇÃO: Pré-carrega a imagem mais importante (LCP) para acelerar a renderização -->
+    <link rel="preload" fetchpriority="high" as="image" href="imagem/barelanchonete-editada.webp" type="image/webp">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- =================================================== -->
     <!-- ========= META TAGS PARA REDES SOCIAIS ============ -->
@@ -19,21 +22,22 @@
     <meta property="og:url" content="https://pixelart-fotos.vercel.app/">
     <meta property="og:title" content="PixelArt - Transforme Fotos do seu Cardápio em Ímãs de Pedidos">
     <meta property="og:description" content="Transforme fotos amadoras em imagens profissionais que vendem mais no iFood, Rappi e Instagram.">
-    <meta property="og:image" content="https://pixelart-fotos.vercel.app/imagem/Barelanchonete-Editada.png">
+    <!-- OTIMIZAÇÃO: Usa a imagem .webp, mais leve, para compartilhamento -->
+    <meta property="og:image" content="https://pixelart-fotos.vercel.app/imagem/barelanchonete-editada.webp">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://pixelart-fotos.vercel.app/">
     <meta property="twitter:title" content="PixelArt - Transforme Fotos do seu Cardápio em Ímãs de Pedidos">
     <meta property="twitter:description" content="Transforme fotos amadoras em imagens profissionais que vendem mais no iFood, Rappi e Instagram.">
-    <meta property="twitter:image" content="https://pixelart-fotos.vercel.app/imagem/Barelanchonete-Editada.png">
+    <!-- OTIMIZAÇÃO: Usa a imagem .webp, mais leve, para compartilhamento -->
+    <meta property="twitter:image" content="https://pixelart-fotos.vercel.app/imagem/barelanchonete-editada.webp">
     <!-- =================================================== -->
 
-    <!-- Google tag (gtag.js ) -->
+    <!-- Google tag (gtag.js  ) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-164HZWELTX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag( ){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-164HZWELTX');
     </script>
 
@@ -46,7 +50,7 @@
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js' );
+    'https://connect.facebook.net/en_US/fbevents.js'  );
     fbq('init', '1494828101545910');
     fbq('track', 'PageView');
     </script>
@@ -66,11 +70,19 @@
             <div class="before-after-container">
                 <div class="before-after-slider">
                     <div class="before-image">
-                        <img src="/imagem/BareLanchonete-Original.png" alt="Foto original de um prato de lanchonete.">
+                        <!-- OTIMIZAÇÃO: Usa a tag <picture> para servir a imagem .webp moderna -->
+                        <picture>
+                          <source srcset="imagem/barelanchonete-original.webp" type="image/webp">
+                          <img src="imagem/BareLanchonete-Original.png" alt="Foto original de um prato de lanchonete.">
+                        </picture>
                         <div class="label">ANTES</div>
                     </div>
                     <div class="after-image">
-                        <img src="/imagem/Barelanchonete-Editada.png" alt="Foto profissionalmente editada do mesmo prato de lanchonete.">
+                        <!-- OTIMIZAÇÃO: Usa a tag <picture> para servir a imagem .webp moderna -->
+                        <picture>
+                          <source srcset="imagem/barelanchonete-editada.webp" type="image/webp">
+                          <img src="imagem/Barelanchonete-Editada.png" alt="Foto profissionalmente editada do mesmo prato de lanchonete.">
+                        </picture>
                         <div class="label">DEPOIS</div>
                     </div>
                 </div>
@@ -85,7 +97,7 @@
                 <ul>
                     <li><span aria-hidden="true">❌</span> <strong>Fotos escuras e sem vida</strong> que não mostram o verdadeiro sabor.</li>
                     <li><span aria-hidden="true">❌</span> <strong>Falta de padrão visual</strong> que passa uma imagem de desorganização.</li>
-                    <li><span aria-hidden="true">❌</span> <strong>Concorrentes com fotos melhores</strong> roubando sua atenção (e seus clientes ).</li>
+                    <li><span aria-hidden="true">❌</span> <strong>Concorrentes com fotos melhores</strong> roubando sua atenção (e seus clientes  ).</li>
                     <li><span aria-hidden="true">❌</span> <strong>Resultado:</strong> Menos cliques, menos pedidos e uma percepção de valor mais baixa.</li>
                 </ul>
             </div>
@@ -99,11 +111,17 @@
                     <div class="gallery-item">
                         <div class="before-after-comparison">
                             <div class="comparison-before">
-                                <img src="/imagem/Comidadatica-Original.jpeg" alt="Foto original de um prato executivo." loading="lazy">
+                                <picture>
+                                  <source srcset="imagem/comidadatica-original.webp" type="image/webp">
+                                  <img src="imagem/Comidadatica-Original.jpeg" alt="Foto original de um prato executivo." loading="lazy">
+                                </picture>
                                 <span class="comparison-label">ANTES</span>
                             </div>
                             <div class="comparison-after">
-                                <img src="/imagem/Comidadatica-Editada2.png" alt="Foto editada do prato executivo." loading="lazy">
+                                <picture>
+                                  <source srcset="imagem/comidadatica-editada2.webp" type="image/webp">
+                                  <img src="imagem/Comidadatica-Editada2.png" alt="Foto editada do prato executivo." loading="lazy">
+                                </picture>
                                 <span class="comparison-label">DEPOIS</span>
                             </div>
                         </div>
@@ -112,11 +130,17 @@
                     <div class="gallery-item">
                         <div class="before-after-comparison">
                             <div class="comparison-before">
-                                <img src="/imagem/Miliano-Original.jpg" alt="Foto original de uma marmita fitness." loading="lazy">
+                                <picture>
+                                  <source srcset="imagem/miliano-original.webp" type="image/webp">
+                                  <img src="imagem/Miliano-Original.jpg" alt="Foto original de uma marmita fitness." loading="lazy">
+                                </picture>
                                 <span class="comparison-label">ANTES</span>
                             </div>
                             <div class="comparison-after">
-                                <img src="/imagem/Miliano-Editada.png" alt="Foto editada da marmita fitness." loading="lazy">
+                                <picture>
+                                  <source srcset="imagem/miliano-editada.webp" type="image/webp">
+                                  <img src="imagem/Miliano-Editada.png" alt="Foto editada da marmita fitness." loading="lazy">
+                                </picture>
                                 <span class="comparison-label">DEPOIS</span>
                             </div>
                         </div>
@@ -125,11 +149,17 @@
                     <div class="gallery-item">
                         <div class="before-after-comparison">
                             <div class="comparison-before">
-                                <img src="/imagem/BareLanchonete-Original.png" alt="Foto original de um prato especial." loading="lazy">
+                                <picture>
+                                  <source srcset="imagem/barelanchonete-original.webp" type="image/webp">
+                                  <img src="imagem/BareLanchonete-Original.png" alt="Foto original de um prato especial." loading="lazy">
+                                </picture>
                                 <span class="comparison-label">ANTES</span>
                             </div>
                             <div class="comparison-after">
-                                <img src="/imagem/Barelanchonete-Editada.png" alt="Foto editada do prato especial." loading="lazy">
+                                <picture>
+                                  <source srcset="imagem/barelanchonete-editada.webp" type="image/webp">
+                                  <img src="imagem/Barelanchonete-Editada.png" alt="Foto editada do prato especial." loading="lazy">
+                                </picture>
                                 <span class="comparison-label">DEPOIS</span>
                             </div>
                         </div>
@@ -273,7 +303,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="whatsapp">Seu WhatsApp</label>
-                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11 ) 99999-9999" required>
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11  ) 99999-9999" required>
                             <small>Formato: (11) 99999-9999</small>
                         </div>
                         <div class="form-group">
@@ -338,11 +368,11 @@
             <p class="footer-contact">
                 Contato: 
                 <a href="mailto:luan.gomeswork@gmail.com">luan.gomeswork@gmail.com</a> | 
-                <a href="https://wa.me/5521971597460" target="_blank">WhatsApp: (21 ) 97159-7460</a>
+                <a href="https://wa.me/5521971597460" target="_blank">WhatsApp: (21  ) 97159-7460</a>
             </p>
         </div>
     </footer>
 
-    <script type="module" src="/script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
