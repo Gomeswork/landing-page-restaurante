@@ -22,12 +22,10 @@
             <div class="before-after-container">
                 <div class="before-after-slider">
                     <div class="before-image">
-                        <!-- CORRIGIDO -->
                         <img src="imagem/BareLanchonete-Original.png" alt="Foto original de um prato de lanchonete.">
                         <div class="label">ANTES</div>
                     </div>
                     <div class="after-image">
-                        <!-- CORRIGIDO -->
                         <img src="imagem/Barelanchonete-Editada.png" alt="Foto profissionalmente editada do mesmo prato de lanchonete.">
                         <div class="label">DEPOIS</div>
                     </div>
@@ -57,12 +55,10 @@
                     <div class="gallery-item">
                         <div class="before-after-comparison">
                             <div class="comparison-before">
-                                <!-- CORRIGIDO -->
                                 <img src="imagem/Comidadatica-Original.jpeg" alt="Foto original de um prato executivo.">
                                 <span class="comparison-label">ANTES</span>
                             </div>
                             <div class="comparison-after">
-                                <!-- CORRIGIDO -->
                                 <img src="imagem/Comidadatica-Editada2.png" alt="Foto editada do prato executivo.">
                                 <span class="comparison-label">DEPOIS</span>
                             </div>
@@ -72,12 +68,10 @@
                     <div class="gallery-item">
                         <div class="before-after-comparison">
                             <div class="comparison-before">
-                                <!-- CORRIGIDO -->
                                 <img src="imagem/Miliano-Original.jpg" alt="Foto original de uma marmita fitness.">
                                 <span class="comparison-label">ANTES</span>
                             </div>
                             <div class="comparison-after">
-                                <!-- CORRIGIDO -->
                                 <img src="imagem/Miliano-Editada.png" alt="Foto editada da marmita fitness.">
                                 <span class="comparison-label">DEPOIS</span>
                             </div>
@@ -87,12 +81,10 @@
                     <div class="gallery-item">
                         <div class="before-after-comparison">
                             <div class="comparison-before">
-                                <!-- CORRIGIDO -->
                                 <img src="imagem/BareLanchonete-Original.png" alt="Foto original de um prato especial.">
                                 <span class="comparison-label">ANTES</span>
                             </div>
                             <div class="comparison-after">
-                                <!-- CORRIGIDO -->
                                 <img src="imagem/Barelanchonete-Editada.png" alt="Foto editada do prato especial.">
                                 <span class="comparison-label">DEPOIS</span>
                             </div>
@@ -222,8 +214,10 @@
             <div class="container">
                 <h2>Veja a transformação com seus próprios olhos. Sem compromisso.</h2>
                 <p>Chega de imaginar. Envie agora a foto de um prato do seu cardápio e nossa equipe de especialistas em IA irá melhorá-la e te enviar uma amostra 100% gratuita.</p>
-                <form id="lead-form" class="lead-form" name="pixelart-leads" method="POST" data-netlify="true" enctype="multipart/form-data">
-                    <input type="hidden" name="form-name" value="pixelart-leads" />
+                
+                <!-- FORMULÁRIO CORRIGIDO PARA USAR FORMSPREE -->
+                <form id="lead-form" class="lead-form" action="https://formspree.io/f/manbkrrg" method="POST" enctype="multipart/form-data">
+                    
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Seu nome</label>
@@ -237,7 +231,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="whatsapp">Seu WhatsApp</label>
-                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required>
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11 ) 99999-9999" required>
                             <small>Formato: (11) 99999-9999</small>
                         </div>
                         <div class="form-group">
