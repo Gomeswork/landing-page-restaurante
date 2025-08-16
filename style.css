@@ -167,12 +167,14 @@ p {
     margin-top: 40px;
 }
 
+/* CORREÇÃO FINAL PARA CLS E LAYOUT */
 .before-image, .after-image {
     position: relative;
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease;
+    aspect-ratio: 600 / 375; /* Proporção das imagens (width / height) */
 }
 
 .before-image:hover, .after-image:hover {
@@ -181,8 +183,8 @@ p {
 
 .before-image img, .after-image img {
     width: 100%;
-    height: auto; /* CORREÇÃO CLS */
-    object-fit: cover;
+    height: 100%; /* Faz a imagem preencher o contêiner */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
     display: block;
 }
 
@@ -270,17 +272,61 @@ p {
     transform: translateY(-5px);
 }
 
-.gallery-item img {
-    width: 100%;
-    height: auto; /* CORREÇÃO CLS */
-    object-fit: cover;
-}
-
 .gallery-item p {
     padding: 20px;
     font-weight: 600;
     font-size: 1.1rem;
     margin: 0;
+}
+
+/* --- Galeria de Comparação --- */
+.before-after-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-warm);
+}
+
+/* CORREÇÃO FINAL PARA CLS E LAYOUT */
+.comparison-before, .comparison-after {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 600 / 375; /* Proporção das imagens (width / height) */
+}
+
+.comparison-before img, .comparison-after img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.comparison-before:hover img, .comparison-after:hover img {
+    transform: scale(1.05);
+}
+
+.comparison-label {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(0,0,0,0.8);
+    color: var(--white-color);
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.comparison-before .comparison-label {
+    background: var(--error-color);
+}
+
+.comparison-after .comparison-label {
+    background: var(--success-color);
 }
 
 /* --- Seção Benefícios --- */
@@ -351,11 +397,10 @@ p {
 /* --- ESTILOS CORRIGIDOS PARA OS TRUST BADGES --- */
 .trust-badges {
     display: grid;
-    /* Usa auto-fit para criar colunas flexíveis com um tamanho mínimo */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    max-width: 800px; /* Aumentado para dar mais espaço */
-    margin: 50px auto 0; /* Adicionado margin-top para separar dos depoimentos */
+    max-width: 800px;
+    margin: 50px auto 0;
 }
 
 .badge {
@@ -619,7 +664,6 @@ footer a:hover {
         font-size: 1.1rem;
     }
 
-    /* Em telas muito pequenas, os badges ficam em uma coluna */
     .trust-badges {
         grid-template-columns: 1fr;
     }
@@ -651,55 +695,6 @@ footer a:hover {
     animation-delay: 0.4s;
 }
 
-
-/* --- Galeria de Comparação --- */
-.before-after-comparison {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 15px;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-warm);
-}
-
-.comparison-before, .comparison-after {
-    position: relative;
-    overflow: hidden;
-}
-
-.comparison-before img, .comparison-after img {
-    width: 100%;
-    height: auto; /* CORREÇÃO CLS */
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.comparison-before:hover img, .comparison-after:hover img {
-    transform: scale(1.05);
-}
-
-.comparison-label {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    background: rgba(0,0,0,0.8);
-    color: var(--white-color);
-    padding: 4px 8px;
-    border-radius: 15px;
-    font-weight: 700;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-}
-
-.comparison-before .comparison-label {
-    background: var(--error-color);
-}
-
-.comparison-after .comparison-label {
-    background: var(--success-color);
-}
-
 /* --- Seção de Preços --- */
 .pricing {
     background: var(--light-gray-color);
@@ -725,7 +720,6 @@ footer a:hover {
     margin: 0 auto;
 }
 
-/* Layout responsivo para pacotes - 2x2 em desktop */
 @media (min-width: 768px) {
     .pricing-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -929,10 +923,6 @@ footer a:hover {
     .before-after-comparison {
         grid-template-columns: 1fr;
     }
-    
-    .comparison-before img, .comparison-after img {
-        height: auto; /* CORREÇÃO CLS */
-    }
 }
 
 /* Adicionar ao final de style.css para a rotação do ícone do FAQ */
@@ -944,11 +934,11 @@ footer a:hover {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
-    padding: 0 25px; /* Padding inicial zero no eixo Y */
+    padding: 0 25px;
 }
 
 .faq-item.active .faq-answer {
-    max-height: 200px; /* Ou um valor suficiente para o conteúdo */
+    max-height: 200px;
     padding: 0 25px 25px;
 }
 
