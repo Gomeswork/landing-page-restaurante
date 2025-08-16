@@ -213,10 +213,11 @@
         <section id="oferta" class="offer">
             <div class="container">
                 <h2>Veja a transformação com seus próprios olhos. Sem compromisso.</h2>
-                <p>Chega de imaginar. Envie agora a foto de um prato do seu cardápio e nossa equipe de especialistas em IA irá melhorá-la e te enviar uma amostra 100% gratuita.</p>
+                <p>Preencha seus dados abaixo para iniciar o contato. Em seguida, você poderá nos enviar a foto do seu prato diretamente pelo WhatsApp.</p>
                 
-                <!-- FORMULÁRIO CORRIGIDO PARA USAR FORMSPREE -->
-                <form id="lead-form" class="lead-form" action="https://formspree.io/f/manbkrrg" method="POST" enctype="multipart/form-data">
+                <!-- FORMULÁRIO OTIMIZADO PARA WHATSAPP E EMAIL -->
+                <form id="lead-form" class="lead-form" action="https://formspree.io/f/manbkrrg" method="POST">
+
                     
                     <div class="form-row">
                         <div class="form-group">
@@ -231,7 +232,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="whatsapp">Seu WhatsApp</label>
-                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11 ) 99999-9999" required>
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required>
                             <small>Formato: (11) 99999-9999</small>
                         </div>
                         <div class="form-group">
@@ -239,14 +240,12 @@
                             <input type="text" id="restaurant" name="restaurant" required>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="photo">Envie a foto do seu prato aqui</label>
-                        <input type="file" id="photo" name="photo" accept="image/*" required>
-                        <small>Formatos aceitos: JPG, PNG (máx. 10MB)</small>
-                    </div>
+                    
+                    <p class="form-instruction"><strong>Próximo passo:</strong> Envie a foto do seu prato pelo WhatsApp!</p>
+
                     <button type="submit" class="cta-button">
-                        <span class="button-text">ENVIAR FOTO E RECEBER AMOSTRA GRÁTIS</span>
-                        <span class="loading-text" style="display: none;">ENVIANDO...</span>
+                        <span class="button-text">INICIAR CONTATO POR WHATSAPP</span>
+                        <span class="loading-text" style="display: none;">AGUARDE...</span>
                     </button>
                     <small class="privacy-notice"><span aria-hidden="true">🔒</span> Seus dados estão seguros. Odiamos spam tanto quanto você.</small>
                 </form>
