@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
@@ -22,11 +22,13 @@
             <div class="before-after-container">
                 <div class="before-after-slider">
                     <div class="before-image">
-                        <img src="imagem/BareLanchonete-Original.png" alt="Foto original de um prato de lanchonete.">
+                        <!-- IMAGEM DA PRIMEIRA DOBRA: SEM lazy loading -->
+                        <img src="/imagem/BareLanchonete-Original.png" alt="Foto original de um prato de lanchonete.">
                         <div class="label">ANTES</div>
                     </div>
                     <div class="after-image">
-                        <img src="imagem/Barelanchonete-Editada.png" alt="Foto profissionalmente editada do mesmo prato de lanchonete.">
+                        <!-- IMAGEM DA PRIMEIRA DOBRA: SEM lazy loading -->
+                        <img src="/imagem/Barelanchonete-Editada.png" alt="Foto profissionalmente editada do mesmo prato de lanchonete.">
                         <div class="label">DEPOIS</div>
                     </div>
                 </div>
@@ -55,11 +57,13 @@
                     <div class="gallery-item">
                         <div class="before-after-comparison">
                             <div class="comparison-before">
-                                <img src="imagem/Comidadatica-Original.jpeg" alt="Foto original de um prato executivo.">
+                                <!-- AJUSTE: Adicionado loading="lazy" -->
+                                <img src="/imagem/Comidadatica-Original.jpeg" alt="Foto original de um prato executivo." loading="lazy">
                                 <span class="comparison-label">ANTES</span>
                             </div>
                             <div class="comparison-after">
-                                <img src="imagem/Comidadatica-Editada2.png" alt="Foto editada do prato executivo.">
+                                <!-- AJUSTE: Adicionado loading="lazy" -->
+                                <img src="/imagem/Comidadatica-Editada2.png" alt="Foto editada do prato executivo." loading="lazy">
                                 <span class="comparison-label">DEPOIS</span>
                             </div>
                         </div>
@@ -68,11 +72,13 @@
                     <div class="gallery-item">
                         <div class="before-after-comparison">
                             <div class="comparison-before">
-                                <img src="imagem/Miliano-Original.jpg" alt="Foto original de uma marmita fitness.">
+                                <!-- AJUSTE: Adicionado loading="lazy" -->
+                                <img src="/imagem/Miliano-Original.jpg" alt="Foto original de uma marmita fitness." loading="lazy">
                                 <span class="comparison-label">ANTES</span>
                             </div>
                             <div class="comparison-after">
-                                <img src="imagem/Miliano-Editada.png" alt="Foto editada da marmita fitness.">
+                                <!-- AJUSTE: Adicionado loading="lazy" -->
+                                <img src="/imagem/Miliano-Editada.png" alt="Foto editada da marmita fitness." loading="lazy">
                                 <span class="comparison-label">DEPOIS</span>
                             </div>
                         </div>
@@ -81,11 +87,13 @@
                     <div class="gallery-item">
                         <div class="before-after-comparison">
                             <div class="comparison-before">
-                                <img src="imagem/BareLanchonete-Original.png" alt="Foto original de um prato especial.">
+                                <!-- AJUSTE: Adicionado loading="lazy" -->
+                                <img src="/imagem/BareLanchonete-Original.png" alt="Foto original de um prato especial." loading="lazy">
                                 <span class="comparison-label">ANTES</span>
                             </div>
                             <div class="comparison-after">
-                                <img src="imagem/Barelanchonete-Editada.png" alt="Foto editada do prato especial.">
+                                <!-- AJUSTE: Adicionado loading="lazy" -->
+                                <img src="/imagem/Barelanchonete-Editada.png" alt="Foto editada do prato especial." loading="lazy">
                                 <span class="comparison-label">DEPOIS</span>
                             </div>
                         </div>
@@ -215,10 +223,7 @@
                 <h2>Veja a transformação com seus próprios olhos. Sem compromisso.</h2>
                 <p>Preencha seus dados abaixo para iniciar o contato. Em seguida, você poderá nos enviar a foto do seu prato diretamente pelo WhatsApp.</p>
                 
-                <!-- FORMULÁRIO OTIMIZADO PARA WHATSAPP E EMAIL -->
                 <form id="lead-form" class="lead-form" action="https://formspree.io/f/manbkrrg" method="POST">
-
-                    
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Seu nome</label>
@@ -232,7 +237,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="whatsapp">Seu WhatsApp</label>
-                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required>
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11 ) 99999-9999" required>
                             <small>Formato: (11) 99999-9999</small>
                         </div>
                         <div class="form-group">
@@ -297,6 +302,7 @@
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <!-- AJUSTE: Alterado para type="module" para compatibilidade com Vite -->
+    <script type="module" src="/script.js"></script>
 </body>
 </html>
