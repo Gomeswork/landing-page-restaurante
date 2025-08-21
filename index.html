@@ -1,12 +1,17 @@
-Com certeza. Entendi o que você precisa. Vou reescrever o seu arquivo `index.html` com a **modificação necessária no formulário** para que ele redirecione para a página de obrigado.
+Com certeza. Entendi perfeitamente. Você identificou dois problemas: o redirecionamento do formulário e os links de pagamento dos pacotes que não estavam corretos.
 
-A página de obrigado em si é um arquivo separado (`obrigado.html`), como o que te enviei antes. A única mudança no seu `index.html` é uma linha de código que adicionamos ao formulário.
+Ótima observação! Manter os links de pagamento funcionando é absolutamente crítico.
 
-Aqui está o código completo e corrigido para o seu arquivo `index.html`.
+Preparei a versão final e corrigida do seu `index.html`, aplicando **todas as correções necessárias** em um único código para garantir que tudo funcione perfeitamente.
 
-### **O que foi alterado:**
+### **O que foi corrigido:**
 
-*   **Linha 201:** Dentro da tag `<form>`, adicionei a linha `<input type="hidden" name="_next" ...>` que instrui o formulário a redirecionar o usuário para a sua nova página de obrigado após o envio.
+1.  **Redirecionamento do Formulário (Linha 231):** O valor do campo `_next` foi alterado de `https://pixelart-fotos.vercel.app/obrigado.html` para o caminho relativo `./obrigado.html`. Isso garante que o redirecionamento funcione corretamente, independentemente do domínio.
+2.  **Link do Pacote Profissional (Linha 153):** O link antigo foi substituído pelo novo e correto: `https://pay.kiwify.com.br/cOTV2gO`.
+3.  **Link do Pacote Premium (Linha 166):** O link antigo foi substituído pelo novo e correto: `https://pay.kiwify.com.br/p6H90cS`.
+4.  **Link do Pacote Completo (Linha 179):** O link antigo foi substituído pelo novo e correto: `https://pay.kiwify.com.br/OQk6scH`.
+
+Abaixo está o código completo e pronto para ser copiado e colado no seu arquivo `index.html`.
 
 ---
 
@@ -229,7 +234,7 @@ Aqui está o código completo e corrigido para o seu arquivo `index.html`.
                             <li><span aria-hidden="true">✅</span> Ideal para cardápio completo</li>
                             <li><span aria-hidden="true">✅</span> Economia de R$ 9,00</li>
                         </ul>
-                        <a href="https://kiwify.app/7T9CSfA" target="_blank" class="pricing-cta">ESCOLHER ESTE PACOTE</a>
+                        <a href="https://pay.kiwify.com.br/cOTV2gO" target="_blank" class="pricing-cta">ESCOLHER ESTE PACOTE</a>
                     </div>
                     <div class="pricing-card">
                         <div class="pricing-header">
@@ -244,7 +249,7 @@ Aqui está o código completo e corrigido para o seu arquivo `index.html`.
                             <li><span aria-hidden="true">✅</span> Cardápio + redes sociais</li>
                             <li><span aria-hidden="true">✅</span> Economia de R$ 19,50</li>
                         </ul>
-                        <a href="https://kiwify.app/sNpmrff" target="_blank" class="pricing-cta">ESCOLHER ESTE PACOTE</a>
+                        <a href="https://pay.kiwify.com.br/p6H90cS" target="_blank" class="pricing-cta">ESCOLHER ESTE PACOTE</a>
                     </div>
                     <div class="pricing-card">
                         <div class="pricing-header">
@@ -259,7 +264,7 @@ Aqui está o código completo e corrigido para o seu arquivo `index.html`.
                             <li><span aria-hidden="true">✅</span> Solução completa</li>
                             <li><span aria-hidden="true">✅</span> Economia de R$ 39,00</li>
                         </ul>
-                        <a href="https://kiwify.app/GSYJoGe" target="_blank" class="pricing-cta">ESCOLHER ESTE PACOTE</a>
+                        <a href="https://pay.kiwify.com.br/OQk6scH" target="_blank" class="pricing-cta">ESCOLHER ESTE PACOTE</a>
                     </div>
                 </div>
             </div>
@@ -306,8 +311,7 @@ Aqui está o código completo e corrigido para o seu arquivo `index.html`.
                 
                 <form id="lead-form" class="lead-form" action="https://formspree.io/f/manbkrrg" method="POST">
                     
-                    <!-- CÓDIGO DE REDIRECIONAMENTO ADICIONADO AQUI -->
-                    <input type="hidden" name="_next" value="https://pixelart-fotos.vercel.app/obrigado.html">
+                    <input type="hidden" name="_next" value="./obrigado.html">
 
                     <div class="form-row">
                         <div class="form-group">
