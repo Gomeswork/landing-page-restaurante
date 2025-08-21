@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo Certo! Sua Amostra Está a Caminho - PixelArt</title>
+    
+    <!-- Link para seu CSS existente (para as variáveis de cor e fonte) -->
+    <link rel="stylesheet" href="/style.css"> 
+    
+    <!-- Tag Global do Google (gtag.js) - ESSENCIAL -->
+    <!-- Cole aqui a sua Tag Global do Google (a mesma que está no seu index.html) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-164HZWELTX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag( ){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-164HZWELTX');
+    </script>
+    <!-- Fim da Tag do Google -->
+
+    <!-- SNIPPET DE EVENTO DA CONVERSÃO DO GOOGLE ADS VAI AQUI -->
+    <!-- Exemplo: <script> gtag('event', 'conversion', {'send_to': 'AW-12345/ABCDE'}); </script> -->
+
+    <style>
+        /* Estilos para uma página de obrigado premium */
+        :root {
+            /* Importando variáveis do seu style.css para consistência */
+            --dark-color: #2C2C54;
+            --primary-color: #FF4757;
+            --success-color: #26de81;
+            --white-color: #FFFFFF;
+            --gradient-warm: linear-gradient(135deg, #FF4757 0%, #FF6B35 50%, #FFA502 100%);
+            --font-family: 'Poppins', sans-serif;
+            --border-radius: 12px;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--dark-color) 0%, #1e1e3f 100%);
+            text-align: center;
+            padding: 20px;
+            font-family: var(--font-family);
+            color: var(--white-color);
+        }
+
+        .thank-you-container {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            max-width: 650px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .icon-success {
+            font-size: 4rem;
+            color: var(--success-color);
+            margin-bottom: 20px;
+            animation: popIn 0.5s 0.5s ease-out backwards;
+        }
+        
+        @keyframes popIn {
+            0% { transform: scale(0); }
+            80% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .thank-you-container h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .thank-you-container p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .next-steps {
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 8px;
+        }
+
+        .next-steps h3 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .next-steps ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .next-steps li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .next-steps li::before {
+            content: '✅';
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .button-group {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            background: var(--gradient-warm);
+            color: var(--white-color);
+            padding: 15px 30px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .secondary-button {
+            background: transparent;
+            border: 2px solid var(--white-color);
+        }
+
+        .footer-note {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="icon-success">✓</div>
+        <h1>Tudo Certo!</h1>
+        <p>Sua solicitação de amostra grátis foi recebida com sucesso. Estamos ansiosos para mostrar a você o potencial das suas fotos!</p>
+
+        <div class="next-steps">
+            <h3>O que acontece agora?</h3>
+            <ul>
+                <li>Nossa equipe analisará sua solicitação.</li>
+                <li>Entraremos em contato pelo WhatsApp informado.</li>
+                <li>Você receberá sua amostra transformada em até 24h.</li>
+            </ul>
+        </div>
+
+        <div class="button-group">
+            <a href="https://wa.me/5521971597460?text=Ol%C3%A1%21%20Acabei%20de%20pedir%20minha%20amostra%20gr%C3%A1tis%20no%20site." target="_blank" class="cta-button">Adicionar no WhatsApp</a>
+            <a href="/" class="cta-button secondary-button">Voltar ao Início</a>
+        </div>
+
+        <p class="footer-note">Fique tranquilo, seus dados estão seguros conosco.</p>
+    </div>
+</body>
+</html>
