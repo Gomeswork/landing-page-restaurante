@@ -6,21 +6,22 @@
     <title>PixelArt - Transforme Fotos do seu Cardápio em Ímãs de Pedidos</title>
     <meta name="description" content="PixelArt transforma as fotos amadoras do seu cardápio em imagens profissionais que vendem mais no iFood, Rappi e Instagram. Receba uma amostra grátis!">
     
-    <link rel="preload" fetchpriority="high" as="image" href="/imagem/barelanchonete-editada.webp" type="image/webp">
+    <!-- OTIMIZAÇÃO: Pré-carrega a imagem mais importante (LCP) para acelerar a renderização -->
+    <link rel="preload" fetchpriority="high" as="image" href="imagem/barelanchonete-editada.webp" type="image/webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- 1. CSS Crítico Simplificado -->
+    <!-- 1. OTIMIZAÇÃO: CSS Crítico para renderização rápida da primeira dobra -->
     <style>
-      :root{--primary-color:#FF4757;--primary-dark:#FF3742;--secondary-color:#FFA502;--accent-color:#FF6B35;--dark-color:#2C2C54;--text-color:#2C2C54;--light-gray-color:#FFF5F5;--white-color:#FFFFFF;--success-color:#26de81;--error-color:#FF4757;--gradient-warm:linear-gradient(135deg, #FF4757 0%, #FF6B35 50%, #FFA502 100% );--gradient-food:linear-gradient(135deg, #FFA502 0%, #FF6B35 100%);--font-family:'Poppins', sans-serif;--shadow:0 8px 25px rgba(255, 71, 87, 0.15);--shadow-warm:0 8px 25px rgba(255, 165, 2, 0.2);--border-radius:12px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--font-family);color:var(--text-color);line-height:1.6;overflow-x:hidden}.container{max-width:1200px;margin:0 auto;padding:0 20px}h1,h2,h3{font-weight:700;text-align:center;margin-bottom:20px}h1{font-size:3.2rem;line-height:1.2}p{font-size:1.1rem;margin-bottom:20px;text-align:center}.cta-button{background:var(--gradient-warm);color:var(--white-color);padding:20px 40px;border-radius:var(--border-radius);text-decoration:none;font-weight:700;font-size:1.1rem;display:inline-block;transition:all 0.3s ease;border:none;cursor:pointer;text-transform:uppercase;letter-spacing:.5px;box-shadow:var(--shadow-warm);position:relative;overflow:hidden}.hero{background:linear-gradient(135deg, var(--dark-color) 0%, #1e1e3f 50%, #2C2C54 100%);color:var(--white-color);padding:120px 0;text-align:center;position:relative;overflow:hidden}.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 30% 70%, rgba(255, 71, 87, 0.1) 0%, transparent 50%),radial-gradient(circle at 70% 30%, rgba(255, 165, 2, 0.1) 0%, transparent 50%);opacity:.8}.hero .container{position:relative;z-index:2}.hero h1{background:var(--gradient-warm);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:25px;text-shadow:none;filter:drop-shadow(2px 2px 4px rgba(0,0,0,.3))}.hero p{font-size:1.4rem;margin-bottom:50px;max-width:700px;margin-left:auto;margin-right:auto;opacity:.95;line-height:1.6}.hero .cta-button{margin-bottom:70px;font-size:1.3rem;padding:22px 45px;box-shadow:0 15px 40px rgba(255, 71, 87, .3)}.before-after-container{margin-top:60px;max-width:800px;margin-left:auto;margin-right:auto}.before-after-slider{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:40px}.before-image,.after-image{position:relative;border-radius:var(--border-radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .3s ease}.before-image img,.after-image img{width:100%;height:100%;object-fit:cover;display:block}.label{position:absolute;top:15px;left:15px;background:rgba(0,0,0,.8);color:var(--white-color);padding:8px 15px;border-radius:20px;font-weight:700;font-size:.9rem;letter-spacing:1px}.before-image .label{background:var(--error-color)}.after-image .label{background:var(--success-color)}@media (max-width:768px){h1{font-size:2.5rem}.hero{padding:80px 0}.hero p{font-size:1.1rem}.before-after-slider{grid-template-columns:1fr}}@media (max-width:480px){h1{font-size:2rem}.cta-button{padding:15px 25px;font-size:1rem}.hero .cta-button{padding:18px 30px;font-size:1.1rem}}
+      :root{--primary-color:#FF4757;--primary-dark:#FF3742;--secondary-color:#FFA502;--accent-color:#FF6B35;--dark-color:#2C2C54;--text-color:#2C2C54;--light-gray-color:#FFF5F5;--white-color:#FFFFFF;--success-color:#26de81;--error-color:#FF4757;--gradient-warm:linear-gradient(135deg, #FF4757 0%, #FF6B35 50%, #FFA502 100%  );--gradient-food:linear-gradient(135deg, #FFA502 0%, #FF6B35 100%);--font-family:'Poppins', sans-serif;--shadow:0 8px 25px rgba(255, 71, 87, 0.15);--shadow-warm:0 8px 25px rgba(255, 165, 2, 0.2);--border-radius:12px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--font-family);color:var(--text-color);line-height:1.6;overflow-x:hidden}.container{max-width:1200px;margin:0 auto;padding:0 20px}h1,h2,h3{font-weight:700;text-align:center;margin-bottom:20px}h1{font-size:3.2rem;line-height:1.2}p{font-size:1.1rem;margin-bottom:20px;text-align:center}.cta-button{background:var(--gradient-warm);color:var(--white-color);padding:20px 40px;border-radius:var(--border-radius);text-decoration:none;font-weight:700;font-size:1.1rem;display:inline-block;transition:all 0.3s ease;border:none;cursor:pointer;text-transform:uppercase;letter-spacing:.5px;box-shadow:var(--shadow-warm);position:relative;overflow:hidden}.hero{background:linear-gradient(135deg, var(--dark-color) 0%, #1e1e3f 50%, #2C2C54 100%);color:var(--white-color);padding:120px 0;text-align:center;position:relative;overflow:hidden}.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 30% 70%, rgba(255, 71, 87, 0.1) 0%, transparent 50%),radial-gradient(circle at 70% 30%, rgba(255, 165, 2, 0.1) 0%, transparent 50%);opacity:.8}.hero .container{position:relative;z-index:2}.hero h1{background:var(--gradient-warm);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:25px;text-shadow:none;filter:drop-shadow(2px 2px 4px rgba(0,0,0,.3))}.hero p{font-size:1.4rem;margin-bottom:50px;max-width:700px;margin-left:auto;margin-right:auto;opacity:.95;line-height:1.6}.hero .cta-button{margin-bottom:70px;font-size:1.3rem;padding:22px 45px;box-shadow:0 15px 40px rgba(255, 71, 87, .3)}.before-after-container{margin-top:60px;max-width:800px;margin-left:auto;margin-right:auto}.before-after-slider{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:40px}.before-image,.after-image{position:relative;border-radius:var(--border-radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .3s ease}.before-image img,.after-image img{width:100%;height:100%;object-fit:cover;display:block}.label{position:absolute;top:15px;left:15px;background:rgba(0,0,0,.8);color:var(--white-color);padding:8px 15px;border-radius:20px;font-weight:700;font-size:.9rem;letter-spacing:1px}.before-image .label{background:var(--error-color)}.after-image .label{background:var(--success-color)}@media (max-width:768px){h1{font-size:2.5rem}.hero{padding:80px 0}.hero p{font-size:1.1rem}.before-after-slider{grid-template-columns:1fr}}@media (max-width:480px){h1{font-size:2rem}.cta-button{padding:15px 25px;font-size:1rem}.hero .cta-button{padding:18px 30px;font-size:1.1rem}}
     </style>
 
-    <!-- 2. Carregar o Restante do CSS de Forma Não-Bloqueante -->
-    <link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/style.css"></noscript>
+    <!-- 2. OTIMIZAÇÃO: Carrega o restante do CSS de forma não-bloqueante -->
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pixelart-fotos.vercel.app/">
@@ -37,7 +38,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-164HZWELTX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(   ){dataLayer.push(arguments);}
+      function gtag(    ){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-164HZWELTX');
     </script>
@@ -52,7 +53,7 @@
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js'    );
+    'https://connect.facebook.net/en_US/fbevents.js'     );
     fbq('init', '1494828101545910');
     fbq('track', 'PageView');
     </script>
@@ -73,15 +74,15 @@
                 <div class="before-after-slider">
                     <div class="before-image">
                         <picture>
-                          <source srcset="/imagem/barelanchonete-original.webp" type="image/webp">
-                          <img src="/imagem/barelanchonete-original.png" alt="Foto original de um prato de lanchonete." width="600" height="375">
+                          <source srcset="imagem/barelanchonete-original.webp" type="image/webp">
+                          <img src="imagem/BareLanchonete-Original.png" alt="Foto original de um prato de lanchonete." width="600" height="375">
                         </picture>
                         <div class="label">ANTES</div>
                     </div>
                     <div class="after-image">
                         <picture>
-                          <source srcset="/imagem/barelanchonete-editada.webp" type="image/webp">
-                          <img src="/imagem/barelanchonete-editada.png" alt="Foto profissionalmente editada do mesmo prato de lanchonete." width="600" height="375">
+                          <source srcset="imagem/barelanchonete-editada.webp" type="image/webp">
+                          <img src="imagem/Barelanchonete-Editada.png" alt="Foto profissionalmente editada do mesmo prato de lanchonete." width="600" height="375">
                         </picture>
                         <div class="label">DEPOIS</div>
                     </div>
@@ -97,7 +98,7 @@
                 <ul>
                     <li><span aria-hidden="true">❌</span> <strong>Fotos escuras e sem vida</strong> que não mostram o verdadeiro sabor.</li>
                     <li><span aria-hidden="true">❌</span> <strong>Falta de padrão visual</strong> que passa uma imagem de desorganização.</li>
-                    <li><span aria-hidden="true">❌</span> <strong>Concorrentes com fotos melhores</strong> roubando sua atenção (e seus clientes    ).</li>
+                    <li><span aria-hidden="true">❌</span> <strong>Concorrentes com fotos melhores</strong> roubando sua atenção (e seus clientes ).</li>
                     <li><span aria-hidden="true">❌</span> <strong>Resultado:</strong> Menos cliques, menos pedidos e uma percepção de valor mais baixa.</li>
                 </ul>
             </div>
@@ -112,15 +113,15 @@
                         <div class="before-after-comparison">
                             <div class="comparison-before">
                                 <picture>
-                                  <source srcset="/imagem/comidadatica-original.webp" type="image/webp">
-                                  <img src="/imagem/comidadatica-original.jpeg" alt="Foto original de um prato executivo." loading="lazy" width="600" height="375">
+                                  <source srcset="imagem/comidadatica-original.webp" type="image/webp">
+                                  <img src="imagem/Comidadatica-Original.jpeg" alt="Foto original de um prato executivo." loading="lazy" width="600" height="375">
                                 </picture>
                                 <span class="comparison-label">ANTES</span>
                             </div>
                             <div class="comparison-after">
                                 <picture>
-                                  <source srcset="/imagem/comidadatica-editada2.webp" type="image/webp">
-                                  <img src="/imagem/comidadatica-editada2.png" alt="Foto editada do prato executivo." loading="lazy" width="600" height="375">
+                                  <source srcset="imagem/comidadatica-editada2.webp" type="image/webp">
+                                  <img src="imagem/Comidadatica-Editada2.png" alt="Foto editada do prato executivo." loading="lazy" width="600" height="375">
                                 </picture>
                                 <span class="comparison-label">DEPOIS</span>
                             </div>
@@ -131,15 +132,15 @@
                         <div class="before-after-comparison">
                             <div class="comparison-before">
                                 <picture>
-                                  <source srcset="/imagem/miliano-original.webp" type="image/webp">
-                                  <img src="/imagem/miliano-original.jpg" alt="Foto original de uma marmita fitness." loading="lazy" width="600" height="375">
+                                  <source srcset="imagem/miliano-original.webp" type="image/webp">
+                                  <img src="imagem/Miliano-Original.jpg" alt="Foto original de uma marmita fitness." loading="lazy" width="600" height="375">
                                 </picture>
                                 <span class="comparison-label">ANTES</span>
                             </div>
                             <div class="comparison-after">
                                 <picture>
-                                  <source srcset="/imagem/miliano-editada.webp" type="image/webp">
-                                  <img src="/imagem/miliano-editada.png" alt="Foto editada da marmita fitness." loading="lazy" width="600" height="375">
+                                  <source srcset="imagem/miliano-editada.webp" type="image/webp">
+                                  <img src="imagem/Miliano-Editada.png" alt="Foto editada da marmita fitness." loading="lazy" width="600" height="375">
                                 </picture>
                                 <span class="comparison-label">DEPOIS</span>
                             </div>
@@ -150,15 +151,15 @@
                         <div class="before-after-comparison">
                             <div class="comparison-before">
                                 <picture>
-                                  <source srcset="/imagem/barelanchonete-original.webp" type="image/webp">
-                                  <img src="/imagem/barelanchonete-original.png" alt="Foto original de um prato especial." loading="lazy" width="600" height="375">
+                                  <source srcset="imagem/barelanchonete-original.webp" type="image/webp">
+                                  <img src="imagem/BareLanchonete-Original.png" alt="Foto original de um prato especial." loading="lazy" width="600" height="375">
                                 </picture>
                                 <span class="comparison-label">ANTES</span>
                             </div>
                             <div class="comparison-after">
                                 <picture>
-                                  <source srcset="/imagem/barelanchonete-editada.webp" type="image/webp">
-                                  <img src="/imagem/barelanchonete-editada.png" alt="Foto editada do prato especial." loading="lazy" width="600" height="375">
+                                  <source srcset="imagem/barelanchonete-editada.webp" type="image/webp">
+                                  <img src="imagem/Barelanchonete-Editada.png" alt="Foto editada do prato especial." loading="lazy" width="600" height="375">
                                 </picture>
                                 <span class="comparison-label">DEPOIS</span>
                             </div>
@@ -291,6 +292,7 @@
                 
                 <form id="lead-form" class="lead-form" action="https://formspree.io/f/manbkrrg" method="POST">
                     
+                    <!-- ✅ CORREÇÃO: Redireciona para a página de obrigado local -->
                     <input type="hidden" name="_next" value="./obrigado.html">
 
                     <div class="form-row">
@@ -306,7 +308,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="whatsapp">Seu WhatsApp</label>
-                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required>
+                            <input type="tel" id="whatsapp" name="whatsapp" placeholder="(11 ) 99999-9999" required>
                             <small>Formato: (11) 99999-9999</small>
                         </div>
                         <div class="form-group">
@@ -371,12 +373,11 @@
             <p class="footer-contact">
                 Contato: 
                 <a href="mailto:luan.gomeswork@gmail.com">luan.gomeswork@gmail.com</a> | 
-                <a href="https://wa.me/5521971597460" target="_blank">WhatsApp: (21) 97159-7460</a>
+                <a href="https://wa.me/5521971597460" target="_blank">WhatsApp: (21 ) 97159-7460</a>
             </p>
         </div>
     </footer>
 
-    <script type="module" src="/script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
-```
